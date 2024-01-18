@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">My City</string>
+    <string name="back_button">Back</string>
+    <string name="Sitio1">Cafeteria</string>
+    <string name="Sitio2">Centros Comerciales</string>
+    <string name="Sitio3">Librerias</string>
+    <string name="Cafe1">Cafeteria Aromas</string>
+    <string name="Cafe1desc">Cafeteria Aromas</string>
+    <string name="Cafe2">Cafeteria Avenida 55</string>
+    <string name="Cafe2desc">Cafeteria Avenida 55</string>
+    <string name="Cafe3">Cafeteria Gran Vía</string>
+    <string name="Cafe3desc">Cafeteria Gran Vía</string>
+    <string name="Cafe4">Cafeteria Ohana</string>
+    <string name="Cafe4desc">Cafeteria Ohana</string>
+    <string name="Mall1">Berceo</string>
+    <string name="Mall1desc">Si, eso</string>
+    <string name="Mall2">Alcampo</string>
+    <string name="Mall2desc">Si, eso</string>
+    <string name="Mall3">Las Cañas</string>
+    <string name="Mall3desc">Si, eso</string>
+    <string name="Library1">Casa del libro</string>
+    <string name="Library1desc">Si, eso</string>
+    <string name="Library2">Picasso</string>
+    <string name="Library2desc">Si, eso</string>
+    <string name="Library3">Traperia de Klaus</string>
+    <string name="Library3desc">Si, eso</string>
+    <string name="Library4">Santos Ochoa</string>
+    <string name="Library4desc">Si, eso</string>
+    <string name="Place">Sitio</string>
+    <string name="PlaceInfo">Información del Sitio</string>
+    <string name="Info">Información</string>
+</resources>
