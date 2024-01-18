@@ -17,7 +17,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
@@ -30,7 +29,7 @@ import com.example.mycity.data.Place
 fun StartScreen(
     places: List<Place>,
     onClicked: (Place) -> Unit = {},
-    modifier: Modifier = Modifier
+
 ) {
     LazyColumn {
         items(places) { place ->
@@ -49,20 +48,18 @@ fun PlaceItem(
         modifier = Modifier
             .padding(dimensionResource(id = R.dimen.padding_small))
             .fillMaxWidth(),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer
-        ),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.errorContainer),
         onClick = { onClicked(place) }
     ) {
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
             modifier = Modifier.padding(horizontal = 5.dp, vertical = 2.dp)
         ) {
-            ImageIcon(imageicon = place.image)
+            ImageIcon(imageIcon = place.image)
             Text(
                 text = stringResource(id = place.name),
-                style = MaterialTheme.typography.headlineMedium,
                 color = MaterialTheme.colorScheme.onPrimaryContainer,
+                style = MaterialTheme.typography.bodySmall,
                 modifier = Modifier.align(Alignment.CenterVertically)
             )
         }
@@ -71,15 +68,14 @@ fun PlaceItem(
 
 @Composable
 fun ImageIcon(
-    @DrawableRes imageicon: Int, modifier: Modifier = Modifier
+    @DrawableRes imageIcon: Int, modifier: Modifier = Modifier
 ) {
     Image(
         modifier = modifier
             .size(dimensionResource(id = R.dimen.image_size))
-            .padding(dimensionResource(id = R.dimen.padding_small))
-            .clip(MaterialTheme.shapes.medium),
-        contentScale = ContentScale.Crop,
-        painter = painterResource(id = imageicon),
+            .padding(dimensionResource(id = R.dimen.padding_small)),
+        contentScale = ContentScale.Fit,
+        painter = painterResource(id = imageIcon),
         contentDescription = null
     )
 }

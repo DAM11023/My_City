@@ -25,11 +25,10 @@ import com.example.mycity.data.PlaceInfo
 fun CategoryScreen(
     placeInfo: List <PlaceInfo>,
     onClicked: (PlaceInfo) -> Unit = {},
-    modifier: Modifier
 ){
     LazyColumn{
-        items(placeInfo){placeInfo->
-            CategoryItem(placeinfo = placeInfo, onClicked = onClicked)
+        items(placeInfo){placeinfo->
+            CategoryItem(placeinfo = placeinfo, onClicked = onClicked)
         }
     }
 }
@@ -37,15 +36,15 @@ fun CategoryScreen(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CategoryItem(
-    placeinfo = PlaceInfo,
+    placeinfo: PlaceInfo,
     onClicked: (PlaceInfo) -> Unit
-    ){
+){
     Card(
         modifier = Modifier
             .padding(dimensionResource(id = R.dimen.padding_small))
             .fillMaxWidth(),
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer
+            containerColor = MaterialTheme.colorScheme.errorContainer
         ),
         onClick = { onClicked(placeinfo)}
     ){
@@ -53,10 +52,10 @@ fun CategoryItem(
             horizontalArrangement = Arrangement.SpaceBetween,
             modifier = Modifier.padding(horizontal = 5.dp, vertical = 2.dp)
         ){
-            ImageIcon(imageicon = placeinfo.image)
+            ImageIcon(imageIcon = placeinfo.image)
             Text(
                 text = stringResource(id = placeinfo.name),
-                style = MaterialTheme.typography.headlineMedium,
+                style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onPrimaryContainer,
                 modifier = Modifier.align(Alignment.CenterVertically)
             )

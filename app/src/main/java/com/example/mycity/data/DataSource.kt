@@ -1,16 +1,15 @@
 package com.example.mycity.data
 
-import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import com.example.mycity.R
 
 
-class Place(image: Int, @StringRes name: Int,) {
-    val name = name
+class Place(image: Int, @StringRes name: Int) {
     val image = image
+    val name = name
 }
 
-class PlaceInfo(image: Int, @StringRes name: Int, @StringRes description: Int ) {
+class PlaceInfo(image: Int, @StringRes name: Int, @StringRes description: Int) {
     val image = image
     val name = name
     val description = description
@@ -18,9 +17,9 @@ class PlaceInfo(image: Int, @StringRes name: Int, @StringRes description: Int ) 
 
 object DataSource {
     val Placelist = listOf(
-        Place(name = R.string.Sitio1, image = R.drawable.alcampo),
-        Place(name = R.string.Sitio2, image = R.drawable.alcampo),
-        Place(name = R.string.Sitio3, image = R.drawable.alcampo)
+        Place(name = R.string.Sitio1, image = R.drawable.coffee),
+        Place(name = R.string.Sitio2, image = R.drawable.mall),
+        Place(name = R.string.Sitio3, image = R.drawable.library)
     )
 
     val Cafe = listOf(
